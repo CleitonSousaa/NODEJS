@@ -5,9 +5,16 @@
 - Instalacao das dependencias 
 > no terminal   ``` npm install ```
    
-- Rodar o projeto  
+- Rodar o projeto :    
 > no terminal   ``` npm start ``` 
-- api com nodeJS e mySQL  
+
+- Tecnologias Usadas :   
+> NodeJS   
+> MySQL    
+> Express  
+> Dotenv   
+> cors   
+> body-parser   
 - testar rotas da api   
 > https://resttesttest.com/   
 
