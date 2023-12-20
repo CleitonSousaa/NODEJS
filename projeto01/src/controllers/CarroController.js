@@ -63,5 +63,14 @@ module.exports = {
             json.error = 'Campos nao enviados'
         }
         res.json(json);
+    },
+    excluir: async (req, res) => {
+        let json = {error: '', result:{}};
+
+        let codigo = req.body.codigo;
+
+        await CarroService.excluir(codigo);
+
+        res.json(json);
     }
 }
