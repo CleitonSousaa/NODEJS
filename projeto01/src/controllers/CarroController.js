@@ -43,5 +43,25 @@ module.exports = {
             json.error = 'Campos nao enviados'
         }
         res.json(json);
+    },
+    alterar: async (req, res) => {
+        let json = {error: '', result:{}};
+
+        
+        let modelo = req.body.modelo;
+        let placa = req.body.placa;
+        let codigo = req.body.codigo;
+
+        if( modelo && placa && codigo) {
+            await CarroService.alterar(modelo, placa, codigo);
+            json.result = {
+                modelo,
+                placa,
+                codigo
+            };
+        }else{
+            json.error = 'Campos nao enviados'
+        }
+        res.json(json);
     }
 }
