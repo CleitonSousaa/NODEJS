@@ -1,7 +1,7 @@
 # SOBRE  
 - Projetos usando node de suas bibliotecas
 
-## Projeto 01  
+## Projeto 01  - Api
 - Instalacao das dependencias 
 > no terminal   ``` npm install ```
    
