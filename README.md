@@ -1,7 +1,7 @@
 # SOBRE  
 - Projetos usando node de suas bibliotecas
 
-## Projeto 01  
+## Projeto 01 - Api
 - Instalacao das dependencias 
 > no terminal   ``` npm install ```
    
@@ -16,6 +16,9 @@
 > cors   
 > body-parser   
 - testar rotas da api   
-> https://resttesttest.com/   
+> https://resttesttest.com/  
+
+## Projeto 02 - Crud  
+- Documentação de uso dentro do projeto  
 
 

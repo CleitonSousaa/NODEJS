@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #bcd9fd;
+        }
+        section{
+            width: 1000px;
+            height: 600px;
+            background-color: #0861ceb3;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px #74abef;
+            position: relative;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .logo i{
+            font-size: 50px;
+        }
+        .logo h1{
+            font-size: 40px;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;   
+        }
+        .menu i{
+            font-size: 70px;
+        }
+        .menu i:hover{
+            color: #bcd9fd;
+        }
+        .obj{
+            width: 100%;
+            height: 100%;
+            background-color: #bcd9fd7e;
+            clip-path: polygon(91% 0, 100% 10%, 54% 29%, 25% 46%, 53% 68%, 100% 90%, 93% 100%, 52% 71%, 0 45%, 51% 26%);
+            z-index: 0;
+        }
+        .conteudo{
+            color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+        }
+        .conteudo a{
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: grey; 
+            font-weight: 800;
+        }
+        .conteudo a:hover{
+            color: #bcd9fd;
+        }
+        .btn_back{
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: grey; 
+            font-weight: 800;
+        }
+        .btn_back:hover{
+          color: #bcd9fd;
+        }
+        .btn_submit{
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: grey; 
+            font-weight: 800;
+            border: none;
+        }
+        .btn_submit:hover{
+            color: #bcd9fd;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <header>
+        <div class="logo">
+            <i class="fa-brands fa-nfc-symbol"></i>
+            <h1>CRUD</h1>
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="conteudo">
+        <H1>EDITAR</H1>
+        {{#each posts}}
+            <form action="/upd" method="POST">
+                <p>ID: <input type="hidden" name="id" >{{id}}</p>
+                <p>Nome: <input type="text" name="nome" value="{{nome}}"></p>
+                <p>SOBRENOME: <input type="text" name="sobrenome" value="{{sobrenome}}" ></p>
+                <p>Email: <input type="text" name="email" value="{{email}}"></p>
+                <button type="submit" class="btn_submit">atualizar dados</button>
+            </form>
+        {{/each}} 
+    </div>
+    <a href="/" class="btn_back">voltar a pagina principal</a> 
+    <div class="obj"></div>
+    </section> 
+</body>
+</html>
