@@ -1,2 +1,18 @@
+# Dependency directories
 node_modules/
-package-lock.json
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Output of build tools
+dist/
+build/
+out/
+
+# OS generated files
+.DS_Store
+Thumbs.db
